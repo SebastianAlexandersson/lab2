@@ -23,16 +23,22 @@ body {
     flex-wrap: wrap;
 }
 
+.rounded {
+    border-radius: 0.5em;
+}
+
 /* HEADER + NAV */
 
 header {
     background-color: lightblue;
     color: #fff;
+    padding: 0.5em 0;
+    position: static;
 }
 
 header h1 {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
 }
 
 nav ul {
@@ -47,11 +53,11 @@ nav ul a {
     padding: 1em;
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 nav ul a:hover {
-    border-bottom: 0.1em solid rgb(99, 142, 199);
+    border-bottom: 0.1em solid #638ec7;
     padding-bottom: 0.9em;
 }
 
@@ -83,17 +89,62 @@ header > .row {
     justify-content: space-between;
 }
 
+.search-icon {
+    color: #00000096;
+    position: absolute;
+    top: 25%;
+    left: 0.3em;
+}
+
+header input[type="text"] {
+    padding-left: 2em;
+}
+
+.header-icons {
+    justify-self: right;
+}
+
+.header-icons > a {
+    color: #fff;
+}
+
+.header-icons > a:hover {
+    color: #638ec7;
+}
+
+.header-icons i {
+    padding-right: 0.3em;
+}
+
+header > .row > a {
+    color: #fff;
+    text-decoration: none;
+}
 /* --------------------------------- */
 
 /* FORMS */
 
 form {
-    padding: 1em;
+    padding: 0.5em;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+form input {
+    font-size: 0.9em;
+    padding: 0.5em;
+    border: 1px solid #00000088;
+    border-radius: 0.3em;
 }
 
 input[type="text"] {
-    font-size: 1em;
-    color: #00000096;
+    color: #000;
+}
+
+input[type="submit"] {
+    cursor: pointer;
 }
 
 /* ----------------------------------*/
