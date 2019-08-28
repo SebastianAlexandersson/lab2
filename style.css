@@ -27,16 +27,17 @@ body {
     border-radius: 0.5em;
 }
 
-/* HEADER + NAV */
+/* NAV */
 
-header {
+nav {
     background-color: lightblue;
     color: #fff;
     padding: 0.5em 0;
-    position: static;
+    width: 100%;
+    position: fixed;
 }
 
-header h1 {
+nav h1 {
     text-align: center;
     margin: 0;
 }
@@ -77,14 +78,14 @@ nav ul ul li {
     display: block;
 }
 
-nav > ul > li:last-child:hover > ul {
+nav > .row > ul > li:last-child:hover > ul {
     transform: scaleY(1);
     opacity: 1;
     transform-origin: top;
     transition: transform 0.2s, opacity 0.6s;
 }
 
-header > .row {
+nav > .row {
     align-items: center;
     justify-content: space-between;
 }
@@ -96,31 +97,50 @@ header > .row {
     left: 0.3em;
 }
 
-header input[type="text"] {
+nav input[type="text"] {
     padding-left: 2em;
 }
 
-.header-icons {
+.nav-icons {
     justify-self: right;
 }
 
-.header-icons > a {
+.nav-icons > a {
     color: #fff;
 }
 
-.header-icons > a:hover {
+.nav-icons > a:hover {
     color: #638ec7;
 }
 
-.header-icons i {
+.nav-icons i {
     padding-right: 0.3em;
 }
 
-header > .row > a {
+nav > .row > a {
     color: #fff;
     text-decoration: none;
 }
 /* --------------------------------- */
+
+/* HEADER */
+
+header { 
+    position: relative;
+    top: 4em;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+}
+
+header h1 {
+    color: #000;
+    margin: 0;
+}
+
+/* ---------------------------------- */
 
 /* FORMS */
 
