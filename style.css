@@ -7,6 +7,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    background-color: rgba(173, 216, 230, 0.432);
 }
 
 /* UTILS */
@@ -27,6 +28,11 @@ body {
     border-radius: 0.5em;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 /* NAV */
 
 nav {
@@ -35,6 +41,7 @@ nav {
     padding: 0.5em 0;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 
 nav h1 {
@@ -128,16 +135,38 @@ nav > .row > a {
 header { 
     position: relative;
     top: 4em;
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 20em;
+    background-image: url(buisness.jpg);
+    background-repeat: none;
+    background-size: cover;
 }
 
-header h1 {
-    color: #000;
+header > div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #00000063;
+}
+
+header h2 {
+    color: #fff;
     margin: 0;
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header h2:before {
+    content: '"';
+    font-size: 2em;
+    transform: translateY(10e);
+}
+
+header h2:after {
+    content: '"';
+    font-size: 2em;
 }
 
 /* ---------------------------------- */
@@ -168,3 +197,54 @@ input[type="submit"] {
 }
 
 /* ----------------------------------*/
+
+/* MAIN */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    top: 4em;
+}
+
+main article {
+    background-color: #fff;
+    margin: .7em;
+    padding: 1em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+main article:nth-child(odd) {
+    margin-right: .35em;
+}
+
+main article:nth-child(even) {
+    margin-left: .35em;
+}
+
+/* --------------------------------- */
+
+/* FOOTER */
+
+footer {
+    height: 15em;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: .5em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
