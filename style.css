@@ -200,7 +200,6 @@ header h2:after {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   position: relative;
   top: 4em;
   color: rgba(0, 0, 0, 0.753);
@@ -284,70 +283,67 @@ svg {
 
 /* REGISTER FORM */
 
-.form-container form {
+.form-container > form {
   margin-top: 5em;
 }
 
-.form-container input {
-  width: 50%;
-  height: 2em;
-  border: 0;
-  padding: 1em;
-  text-align: center;
-  border-bottom: 1px solid lightblue;
-  transition: all 0.3s ease;
+.form-container > form div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2em;
 }
 
-.form-container label {
+.form-container > form div input {
+  width: 50%;
+  border: none;
+  padding: .5em;
+  font-size: 1em;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 0 lightblue;
+}
+
+.form-container > form div label {
   position: absolute;
-  transform: translateY(20%);
+  cursor: text;
   font-size: .8em;
   transition: all 0.3s ease;
 }
 
-.form-container form div {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
+.form-container > form div input:hover {
+  box-shadow: 0 3px 0 lightblue;
 }
 
-.form-container form div:hover input {
-  border-bottom: 2px solid lightblue;
-}
-
-.form-container form div input:focus {
+.form-container > form div input:focus {
   outline: none;
   width: 60%;
+  box-shadow: 0 3px 0 lightblue;
 }
 
-.form-container form div input:focus ~ label {
+.form-container > form div input:focus ~ label {
   transform: translateY(-100%);
 }
 
-.form-container form div input:valid ~ label {
-  transform: translateY(-100%);
-}
-
-.form-container form div input:valid {
-  border-bottom-color: green;
+.form-container > form div input:valid {
+  box-shadow: 0 3px 0 green;
   width: 60%;
 }
 
-.form-container form div input:invalid {
-  border-bottom-color: red;
-  width: 60%;
-}
-
-.form-container form div input:invalid ~ label {
+.form-container > form div input:valid ~ label {
   transform: translateY(-100%);
 }
 
-.form-container form div input:placeholder-shown {
-  border-bottom-color: lightblue;
+.form-container > form div input[type="submit"] {
+  box-shadow: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.form-container form div input:placeholder-shown ~ label {
-  cursor: text;
+.form-container > form div input[type="submit"]:hover {
+  box-shadow: none;
 }
 
 /* --------------------------------- */
