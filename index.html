@@ -15,6 +15,7 @@
     />
     <title>Webbshop</title>
     <script src="https://kit.fontawesome.com/4c1a6ee25d.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -125,12 +126,75 @@
         <article></article>
         <article class="article-row-span form-container">
           <h2>Registrera Dig</h2>
-          <form action="#" method="POST" name="registeration-form" id="registration-form">
+          <form
+            action="#"
+            method="POST"
+            name="registeration-form"
+            id="registration-form"
+          >
             <div>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                required
+                placeholder=" "
+                pattern="\S+"
+              />
               <label for="first-name">Förnamn</label>
-              <input type="text" name="first-name" id="last-name">
             </div>
-            
+
+            <div>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                required
+                placeholder=" "
+                pattern="\S+"
+              />
+              <label for="last-name">Efternamn</label>
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                required
+                placeholder=" "
+                pattern="\S+"
+              />
+              <label for="user-name">Användarnamn</label>
+            </div>
+
+            <div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder=" "
+                pattern="\S+"
+              />
+              <label for="password">Lösenord</label>
+            </div>
+
+            <div>
+              <input
+                type="email"
+                name="e-mail"
+                id="e-mail"
+                required
+                placeholder=" "
+                pattern="\S+"
+              />
+              <label for="e-mail">E-mail</label>
+            </div>
+
+            <div>
+              <input type="submit" value="Skicka" />
+            </div>
           </form>
         </article>
         <article></article>

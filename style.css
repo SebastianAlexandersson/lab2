@@ -285,14 +285,15 @@ svg {
 /* REGISTER FORM */
 
 .form-container form {
-  width: 100%;
-  height: 100%;
+  margin-top: 5em;
 }
 
 .form-container input {
   width: 50%;
   height: 2em;
   border: 0;
+  padding: 1em;
+  text-align: center;
   border-bottom: 1px solid lightblue;
   transition: all 0.3s ease;
 }
@@ -300,13 +301,14 @@ svg {
 .form-container label {
   position: absolute;
   transform: translateY(20%);
-  margin-left: .5em;
+  font-size: .8em;
   transition: all 0.3s ease;
 }
 
 .form-container form div {
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
 }
 
 .form-container form div:hover input {
@@ -318,13 +320,34 @@ svg {
   width: 60%;
 }
 
-.form-container form div input:focus-within {
-  outline: none;
+.form-container form div input:focus ~ label {
+  transform: translateY(-100%);
+}
+
+.form-container form div input:valid ~ label {
+  transform: translateY(-100%);
+}
+
+.form-container form div input:valid {
+  border-bottom-color: green;
   width: 60%;
 }
 
-.form-container form div input:focus ~ label {
-  transform: translateY(-80%);
+.form-container form div input:invalid {
+  border-bottom-color: red;
+  width: 60%;
+}
+
+.form-container form div input:invalid ~ label {
+  transform: translateY(-100%);
+}
+
+.form-container form div input:placeholder-shown {
+  border-bottom-color: lightblue;
+}
+
+.form-container form div input:placeholder-shown ~ label {
+  cursor: text;
 }
 
 /* --------------------------------- */
