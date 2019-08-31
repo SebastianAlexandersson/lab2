@@ -128,6 +128,30 @@ nav > .row > a {
   color: #fff;
   text-decoration: none;
 }
+
+nav form {
+  padding: 0.5em;
+}
+
+nav form .input-with-icon {
+  position: relative;
+}
+
+nav form input {
+  font-size: 0.9em;
+  padding: 0.5em;
+  border: 1px solid #00000088;
+  border-radius: 0.3em;
+}
+
+nav form input[type="text"] {
+  color: #000;
+}
+
+nav form input[type="submit"] {
+  cursor: pointer;
+}
+
 /* --------------------------------- */
 
 /* HEADER */
@@ -171,33 +195,6 @@ header h2:after {
 
 /* ---------------------------------- */
 
-/* FORMS */
-
-form {
-  padding: 0.5em;
-}
-
-.input-with-icon {
-  position: relative;
-}
-
-form input {
-  font-size: 0.9em;
-  padding: 0.5em;
-  border: 1px solid #00000088;
-  border-radius: 0.3em;
-}
-
-input[type="text"] {
-  color: #000;
-}
-
-input[type="submit"] {
-  cursor: pointer;
-}
-
-/* ----------------------------------*/
-
 /* MAIN */
 
 .grid {
@@ -206,6 +203,7 @@ input[type="submit"] {
   grid-template-rows: repeat(3, 1fr);
   position: relative;
   top: 4em;
+  color: rgba(0, 0, 0, 0.753);
 }
 
 main article {
@@ -275,14 +273,60 @@ main .article-row-span {
   grid-row-end: span 2;
 }
 
-.svg-container {
-  max-width: 50%;
-  width: 50%;
-}
-
 svg {
   height: 20em;
+  margin-right: 5em;
 }
+
+.form-container h2 {
+  text-align: center;
+}
+
+/* REGISTER FORM */
+
+.form-container form {
+  width: 100%;
+  height: 100%;
+}
+
+.form-container input {
+  width: 50%;
+  height: 2em;
+  border: 0;
+  border-bottom: 1px solid lightblue;
+  transition: all 0.3s ease;
+}
+
+.form-container label {
+  position: absolute;
+  transform: translateY(20%);
+  margin-left: .5em;
+  transition: all 0.3s ease;
+}
+
+.form-container form div {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container form div:hover input {
+  border-bottom: 2px solid lightblue;
+}
+
+.form-container form div input:focus {
+  outline: none;
+  width: 60%;
+}
+
+.form-container form div input:focus-within {
+  outline: none;
+  width: 60%;
+}
+
+.form-container form div input:focus ~ label {
+  transform: translateY(-80%);
+}
+
 /* --------------------------------- */
 
 /* FOOTER */
