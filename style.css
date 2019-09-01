@@ -38,7 +38,7 @@ img {
 nav {
   background-color: lightblue;
   color: #fff;
-  padding: 0.5em 0;
+  padding: 1em;
   width: 100%;
   position: fixed;
   z-index: 1;
@@ -58,7 +58,7 @@ nav ul {
 
 nav ul a {
   display: inline-block;
-  padding: 1em;
+  padding: 1em .1em;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -79,17 +79,23 @@ nav ul ul {
   background-color: lightblue;
   transform: scaleY(0);
   opacity: 0;
+  z-index: 1;
 }
 
 nav ul ul li {
   display: block;
 }
 
-nav > .row > ul > li:last-child:hover > ul {
+nav ul > li:last-child:hover > ul {
   transform: scaleY(1);
   opacity: 1;
   transform-origin: top;
   transition: transform 0.2s, opacity 0.6s;
+}
+
+nav ul > li:last-child:focus-within > ul {
+  transform: scaleY(1);
+  opacity: 1;
 }
 
 nav > .row {
@@ -110,6 +116,7 @@ nav input[type="text"] {
 
 .nav-icons {
   justify-self: right;
+  margin-right: .5em;
 }
 
 .nav-icons > a {
@@ -259,13 +266,7 @@ main article:nth-child(5) {
 
 main .article-col-span {
   grid-column-end: span 2;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
 
-main .article-col-span p {
-  max-width: 50%;
 }
 
 main .article-row-span {
@@ -379,3 +380,32 @@ footer a {
 /* -------------------------------- */
 
 /* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+  nav ul {
+    margin: auto;
+    width: 100%;
+  }
+
+  nav h1 {
+    margin: auto;
+  }
+
+  nav .nav-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1em;
+  }
+
+  article {
+    grid-column-end: span 2;
+    margin: .5em 0 !important;
+  }
+
+  .search-form {
+    padding: 0;
+  }
+}
+
+/* -------------------------------- */
