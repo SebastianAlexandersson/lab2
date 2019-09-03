@@ -161,8 +161,7 @@ header {
   position: relative;
   top: 4em;
   height: 20em;
-  background-image: url(/img/header.jpg);
-  background-repeat: none;
+  background-image: url(/img/header2.jpg);
   background-size: cover;
 }
 
@@ -375,7 +374,7 @@ footer a {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   nav ul {
     margin: auto;
     width: 100%;
@@ -383,10 +382,6 @@ footer a {
 
   nav ul ul {
     width: 10em;
-  }
-
-  nav ul ul li {
-    
   }
 
   nav h1 {
@@ -412,9 +407,20 @@ footer a {
   .grid {
     max-width: 100%;
   }
+
+  header,
+  .grid,
+  footer
+  {
+    top: 9em;
+  }
+
+  header {
+    height: 10em;
+  }
 }
 
-@media (min-width: 701px) {
+@media (min-width: 768px) {
   main .article-col-span div:last-of-type {
     max-width: 50%;
   }
@@ -425,6 +431,22 @@ footer a {
 
   nav .nav-icons {
     margin-left: 1em;
+  }
+
+  header,
+  .grid,
+  footer
+  {
+    top: 7em;
+  }
+}
+
+@media (min-width: 788px) {
+  header,
+  .grid,
+  footer
+  {
+    top: 5em;
   }
 }
 
