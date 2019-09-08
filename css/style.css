@@ -43,6 +43,7 @@ nav h1 {
   margin: 0;
   margin-left: 0.5em;
   color: rgba(0, 0, 0, 0.753);
+  border-bottom: 2px solid lightblue;
 }
 
 nav ul {
@@ -217,9 +218,9 @@ main article {
 main article::before {
   content: "";
   position: absolute;
-  height: 2em;
-  width: 2em;
-  background-color: rgb(107, 107, 107);
+  height: 1.5em;
+  width: 1.5em;
+  background-color: lightblue;
   top: 0;
   left: 0;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -228,9 +229,9 @@ main article::before {
 main article::after {
   content: "";
   position: absolute;
-  height: 2em;
-  width: 2em;
-  background-color: rgb(107, 107, 107);
+  height: 1.5em;
+  width: 1.5em;
+  background-color: lightblue;
   bottom: 0;
   right: 0;
   transform: translate(50%, 50%) rotate(45deg);
