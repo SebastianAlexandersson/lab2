@@ -1,0 +1,12 @@
+.product-grid {
+  position: relative;
+  top: 9em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr)
+}
+
+.product-grid article {
+  margin: 0;
+  margin: .5em;
+}
+
