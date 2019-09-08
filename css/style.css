@@ -206,7 +206,7 @@ header h2:after {
   color: rgba(0, 0, 0, 0.753);
 }
 
-main article {
+main .grid article {
   background-color: #fff;
   margin: 0.7em;
   padding: 1em;
@@ -215,7 +215,7 @@ main article {
   overflow: hidden;
 }
 
-main article::before {
+main .grid article::before {
   content: "";
   position: absolute;
   height: 1.5em;
@@ -226,7 +226,7 @@ main article::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-main article::after {
+main .grid article::after {
   content: "";
   position: absolute;
   height: 1.5em;
@@ -237,39 +237,34 @@ main article::after {
   transform: translate(50%, 50%) rotate(45deg);
 }
 
-main article:nth-child(odd) {
+main .grid article:nth-child(odd) {
   margin-left: 0.35em;
 }
 
-main article:nth-child(even) {
+main .grid article:nth-child(even) {
   margin-right: 0.35em;
 }
 
-main article:first-child {
+main .grid article:first-child {
   margin-left: 0.7em;
   margin-bottom: 0;
 }
 
-main article:nth-child(4) {
+main .grid article:nth-child(4) {
   margin-top: 0;
 }
 
-main article:nth-child(5) {
+main .grid article:nth-child(5) {
   margin-top: 0;
 }
 
-main .article-col-span {
+main .grid .article-col-span {
   grid-column-end: span 2;
 
 }
 
-main .article-row-span {
+main .grid .article-row-span {
   grid-row-end: span 2;
-}
-
-svg {
-  height: 20em;
-  margin-right: 5em;
 }
 
 .form-container h2 {
@@ -396,7 +391,7 @@ footer a {
     margin-top: 1em;
   }
 
-  article {
+  .grid article {
     grid-column-end: span 2;
     margin: .5em 0 !important;
   }
@@ -422,11 +417,11 @@ footer a {
 }
 
 @media (min-width: 768px) {
-  main .article-col-span div:last-of-type {
+  main .grid .article-col-span div:last-of-type {
     max-width: 50%;
   }
 
-  main .article-col-span > div {
+  main .grid .article-col-span > div {
     max-width: 50%;
   }
 

@@ -2,11 +2,138 @@
   position: relative;
   top: 9em;
   display: grid;
-  grid-template-columns: repeat(5, 1fr)
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.753);
+  max-width: 100%;
 }
 
 .product-grid article {
-  margin: 0;
   margin: .5em;
+  box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003b;
+  text-align: center;
+}
+
+.product-grid h2,
+.product-grid h3
+{
+  padding: 0 1em;
+}
+
+.product-grid h3 {
+  font-weight: lighter;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 1em 0;
+  font-weight: bold;
+  font-size: .8em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: lightgray;
+}
+
+button:hover{ 
+  color: red;
+}
+
+/* PRODUCT ID#3 MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 50%;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.info p {
+  text-align: initial;
+}
+
+.modal {
+  display: none;
+}
+
+#three {
+  position: relative;
+}
+
+#three label {
+  display: block;
+  background-color: lightgray;
+  padding: 1em 0;
+  font-weight: bold;
+  font-size: .8em;
+}
+
+#three label::before {
+  display: none;
+}
+
+#three label:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#three input[type="checkbox"] {
+  display: none;
+}
+
+#three input[type="checkbox"]:checked ~ .modal {
+  display: flex;
+}
+
+#three input[type="checkbox"]:checked ~ label {
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  right: 2%;
+  color: lightgray;
+}
+
+#three input[type="checkbox"]:checked ~ label::before {
+  position: absolute;
+  display: initial;
+  content: "X";
+  z-index: 2;
+  color: #000;
+  left: 30%;
+  top: 10%;
+  font-size: 2.2em;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+  .product-grid {
+    max-width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
